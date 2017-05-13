@@ -1,0 +1,30 @@
+/*
+Theme Name: Twenty Fifteen Child
+Author: Julie S Mike
+Description: Child theme of Twenty Fifteen to add Advanced Custom Fields.
+Template: twentyfifteen
+*/
+
+@import url("../twentyfifteen/style.css");
+
+.info-box {
+  margin-bottom: 2rem;
+  padding: 0 2rem 2rem;
+  background: #dad5d2;
+}
+
+.info-box h1 {
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding: .5rem 2rem;
+  font-size: 20px;
+  background: #9eae48;
+  color: white;
+  font-family: 'Lato', sans-serif;
+
+
+}
+.info-box p{
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+}

@@ -160,3 +160,14 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+//* Filter the comments
+add_filter( 'genesis_title_comments', 'gs_title_comments' );
+
+//* Function to filter the comments
+function gs_title_comments() {
+
+	$title = "<h3>Reader Feedback</h3>";
+	return $title;
+
+}

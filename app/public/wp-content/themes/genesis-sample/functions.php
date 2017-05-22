@@ -92,6 +92,14 @@ add_theme_support( 'genesis-accessibility', array( '404-page', 'drop-down-menu',
 // Add viewport meta tag for mobile browsers.
 add_theme_support( 'genesis-responsive-viewport' );
 
+//Remove the post meta
+remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+
+//Add post meta
+add_action( 'genesis_entry_header', 'genesis_post_meta', 13 );
+
+
+
 // Add support for custom header.
 add_theme_support( 'custom-header', array(
 	'width'           => 600,

@@ -945,6 +945,11 @@ img.alignright,
 	text-align: center;
 }
 
+.after-post {
+	background-color: white;
+	color: black;
+	margin-bottom: 40px;
+}
 /* ## Featured Content
 --------------------------------------------- */
 

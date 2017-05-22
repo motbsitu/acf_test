@@ -171,3 +171,35 @@ function gs_title_comments() {
 	return $title;
 
 }
+
+
+//* Remove the site description
+remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+
+//* Add the site description conditionally
+add_action( 'genesis_site_description', 'homepage_site_description' );
+function homepage_site_description() {
+
+	if ( is_home() ) {
+		genesis_seo_site_description();
+	}
+
+}
+
+//* Register a widget area called 'after-post'
+genesis_register_sidebar( array(
+	'id'            => 'after-post',
+	'name'          => __( 'After Post', 'sample' ),
+	'description'   => __( 'This is a widget area that can be placed after the post', 'sample' ),
+) );
+
+//* Hook after-post widget area after post content
+add_action( 'genesis_before_comments', 'after_post_widget' );
+	function after_post_widget() {
+	if ( is_singular( 'post' ) ) {
+		genesis_widget_area( 'after-post', array(
+			'before' => '<div class="after-post widget-area">',
+			'after' => '</div>',
+		) );
+	}
+}

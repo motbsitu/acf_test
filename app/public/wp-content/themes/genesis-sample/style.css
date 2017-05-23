@@ -1414,7 +1414,10 @@ p.entry-meta {
 	display: none;
 }
 
-
+.product-details{
+	background-color: green;
+	border: 1px, black, solid;
+}
 /* # Sidebars
 ---------------------------------------------------------------------------------------------------- */
 

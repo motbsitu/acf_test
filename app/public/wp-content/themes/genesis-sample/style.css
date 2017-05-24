@@ -1104,15 +1104,19 @@ img.alignright,
 }
 
 .site-description {
-	font-size: 16px;
+	font-size: 35px;
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.5;
+	color: white;
+	text-align: center;
 }
 
 .site-description,
 .site-title {
 	margin-bottom: 0;
+	font-size: 50px;
+
 }
 
 .header-image .site-description,

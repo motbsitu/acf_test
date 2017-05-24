@@ -176,8 +176,18 @@ function gs_title_comments() {
 //* Remove the site description
 remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
 
-//* Add the site description conditionally
-add_action( 'genesis_site_description', 'homepage_site_description' );
+//* Add the site description conditionally only on home, original location
+// add_action( 'genesis_site_description', 'homepage_site_description' );
+// function homepage_site_description() {
+//
+// 	if ( is_home() ) {
+// 		genesis_seo_site_description();
+// 	}
+//
+// }
+
+//* Add the site description conditionally only on home in before content
+add_action( 'genesis_before_content', 'homepage_site_description' );
 function homepage_site_description() {
 
 	if ( is_home() ) {
@@ -185,7 +195,6 @@ function homepage_site_description() {
 	}
 
 }
-
 //* Register a widget area called 'after-post'
 genesis_register_sidebar( array(
 	'id'            => 'after-post',

@@ -221,3 +221,18 @@ function gs_add_widget(){
 		)
 	);
 }
+
+//* Customize the footer credits with filter
+add_filter( 'genesis_footer_creds_text', 'my_custom_footer_creds' );
+function my_custom_footer_creds(){
+
+    $creds = '[footer_copyright] JS Mike';
+    return $creds;
+
+}
+
+//* Add support for custom header
+// add_theme_support( 'genesis-custom-header', array(
+//    'width' => 320,
+//    'height' => 120
+// ));

@@ -203,3 +203,21 @@ add_action( 'genesis_before_comments', 'after_post_widget' );
 		) );
 	}
 }
+
+//* Register after post widget area
+genesis_register_sidebar( array(
+	'id'            => 'gs-custom-widget',
+	'name'          => __( 'GS Custom Widget', 'themename' ),
+	'description'   => __( 'This is a custom widget area', 'themename' ),
+) );
+//add custom widget to header area.
+add_action ('genesis_after_header', 'gs_add_widget');
+
+function gs_add_widget(){
+	genesis_widget_area('gs-custom-widget', array(
+		'before' => '<div class=wrap>
+		<div class="gs-widget widget-area">',
+		'after' => '</div></div>',
+		)
+	);
+}

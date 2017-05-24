@@ -950,6 +950,14 @@ img.alignright,
 	color: black;
 	margin-bottom: 40px;
 }
+
+.gs-widget{
+	background-color: white;
+	color: black;
+	border: 1px solid black;
+	margin: 15px;
+	padding: 10px;
+}
 /* ## Featured Content
 --------------------------------------------- */
 

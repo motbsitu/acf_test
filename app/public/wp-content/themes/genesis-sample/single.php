@@ -11,9 +11,11 @@
 add_action('genesis_entry_content', 'gs_custom_product_fields');
 function gs_custom_product_fields() {
   if(get_field('price')){
+    
     echo '<div class="product-details">';
     echo '<h3><span>More Details: ' . get_field('long_description_of_product_here') . '</span></h3>';
     echo '<p><span>Price: $' . get_field('price'). '</span></p>';
+
     echo '</div>';
   }
 }

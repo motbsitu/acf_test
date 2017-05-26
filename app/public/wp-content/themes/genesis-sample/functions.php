@@ -232,8 +232,8 @@ function gs_add_widget(){
 }
 
 //* Customize the footer credits with filter
-add_filter( 'genesis_footer_creds_text', 'my_custom_footer_creds' );
-function my_custom_footer_creds(){
+add_filter( 'genesis_footer_creds_text', 'gs_custom_footer_creds' );
+function gs_custom_footer_creds(){
 
     $creds = '[footer_copyright] JS Mike';
     return $creds;
@@ -245,3 +245,10 @@ function my_custom_footer_creds(){
 //    'width' => 320,
 //    'height' => 120
 // ));
+
+add_filter( 'avatar_defaults', 'gs_custom_gravatar' );
+function gs_custom_gravatar ($avatar) {
+	$custom_avatar = get_stylesheet_directory_uri() . '/images/image.png';
+	$avatar[$custom_avatar] = "Custom Gravatar";
+	return $avatar;
+}

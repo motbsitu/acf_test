@@ -62,6 +62,13 @@ function genesis_sample_enqueue_scripts_styles() {
 
 }
 
+// //FONTS ALONE EXAMPLE
+// //Enqueue Lato Google font
+// add_action( 'wp_enqueue_scripts', 'sp_load_google_fonts' );
+// function sp_load_google_fonts() {
+// 	wp_enqueue_style( 'google-font-lato', '//fonts.googleapis.com/css?family=Lato:300,700', array(), CHILD_THEME_VERSION );
+// }
+
 // Define our responsive menu settings.
 function genesis_sample_responsive_menu_settings() {
 
@@ -252,3 +259,6 @@ function gs_custom_gravatar ($avatar) {
 	$avatar[$custom_avatar] = "Custom Gravatar";
 	return $avatar;
 }
+
+//* Add new image sizes for grid loop
+add_image_size('grid-thumbnail', 100, 100, TRUE);

@@ -1987,3 +1987,9 @@ p.entry-meta {
 .genesis-grid-odd {
 	margin: 0 0 20px;
 }
+
+.tabbed-field{
+	border: 1px solid black;
+	height: 40px;
+	width: 40px;
+}

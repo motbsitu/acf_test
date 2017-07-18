@@ -60,8 +60,15 @@ function genesis_sample_enqueue_scripts_styles() {
 		genesis_sample_responsive_menu_settings()
 	);
 
-}
+	wp_enqueue_script( 'gs-scripts', get_stylesheet_directory_uri() . '/js/gs-scripts.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
+}
+//my script file
+// add_action ('wp_enqueue_scripts', 'gs_scripts');
+// function gs_scripts(){
+// 	wp_enqueue_script( 'gs-scripts', get_stylesheet_directory_uri() . '/js/gs-scripts.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+// //1.12.4
+// }
 // //FONTS ALONE EXAMPLE
 // //Enqueue Lato Google font
 // add_action( 'wp_enqueue_scripts', 'sp_load_google_fonts' );
@@ -253,12 +260,12 @@ function gs_custom_footer_creds(){
 //    'height' => 120
 // ));
 
-add_filter( 'avatar_defaults', 'gs_custom_gravatar' );
-function gs_custom_gravatar ($avatar) {
-	$custom_avatar = get_stylesheet_directory_uri() . '/images/image.png';
-	$avatar[$custom_avatar] = "Custom Gravatar";
-	return $avatar;
-}
+// add_filter( 'avatar_defaults', 'gs_custom_gravatar' );
+// function gs_custom_gravatar ($avatar) {
+// 	$custom_avatar = get_stylesheet_directory_uri() . '/images/image.png';
+// 	$avatar[$custom_avatar] = "Custom Gravatar";
+// 	return $avatar;
+// }
 
 //* Add new image sizes for grid loop
 add_image_size('grid-thumbnail', 100, 100, TRUE);
